@@ -1,0 +1,11 @@
+{
+  "name": "catchup-probe",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Throwaway spike for dsh-catchup: can a non-bundle plugin read the web server port, and are prefix routes reachable without a token?",
+  "type": "module",
+  "main": "index.js",
+  "exports": { ".": "./index.js", "./package.json": "./package.json" },
+  "engines": { "dsh": ">=0.2.1-alpha.2 <0.3.0" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}
