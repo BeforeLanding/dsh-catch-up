@@ -2,6 +2,8 @@
 
 离开一会儿，回来一屏看懂 [Super-agent](https://github.com/deepseek-ai/dsh-superagent-prototype) 的新进展，知道下一步需要你做什么。
 
+![演示：node src/cli.ts --demo](assets/demo.gif)
+
 - **只读**：只发 GET 请求，不重试、不停止、不回复、不调度任何任务。
 - **不调用模型**：简报由固定规则生成。
 - **状态变化摘要，不是完整事件回放**：Super-agent 只保存每个任务的最新状态，离开期间先出现、后又消失的状态无从得知。
