@@ -1,0 +1,39 @@
+{
+  "name": "dsh-catch-up",
+  "version": "0.1.0",
+  "description": "离开一会儿，回来一屏看懂 Super-agent 的新进展。只读，不调用模型。",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "dsh-catch-up": "lib/cli.js"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.ts\"",
+    "demo": "node src/cli.ts --demo",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepare": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  },
+  "main": "lib/plugin/index.js",
+  "exports": {
+    ".": "./lib/plugin/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "fixtures/contract"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
